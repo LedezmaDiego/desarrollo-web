@@ -1,0 +1,33 @@
+html {
+    background-color: black;
+}
+
+.contenedor {
+    text-align: left;
+    color: white;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 550px; /* ancho */
+    height: 250px; /* alto */
+    display: flex; /* separa divs */
+    gap: 10px; /* crea una sangria, ponele :v */
+}
+
+img {
+    border-radius: 8px;
+}
+
+/* h2 {
+    padding: 1px;
+} */
+
+
+html{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }

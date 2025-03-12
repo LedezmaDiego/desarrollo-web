@@ -1,0 +1,43 @@
+/* Comentarios */
+
+/* Selectores */
+
+/* Etiquetas */
+
+/* Modificamos directamente la etiqueta
+ a la cual estamos apuntando */
+
+p {
+    color: #000000;
+}
+
+/* Clase, podemos hacer conjuntos para dar caracteristicas */
+.button-custom {
+    color: blue;
+}
+
+/* ID, es unico */
+#titulo {
+    color: bisque;
+}
+
+.contenedor {
+    color: darkblue; /* modifica el color de la letra */
+    background-color: beige; /* color de fondo */
+    font-size: 20px; /* tamaño de la letra */
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center; /* alineación texto */
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px; /* ancho */
+    height: 200px; /* alto */
+}
+
+.button-div {
+    padding: 10px; /* distancia desde el elemento hasta los bordes */
+    margin: 10px; /* distancia desde los bordes hacia afuera */
+}
+
+.contenedor-flexible {
+    display: flex;
+}

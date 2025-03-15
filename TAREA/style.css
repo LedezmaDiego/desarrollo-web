@@ -1,36 +1,78 @@
 html {
     background-color: #272b33;
     color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 470;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .contenedor {
+    right: 100px;
     background-color: #3c3e44;
+
     /* border: 2px solid black; */
+
     border-radius: 10px;
-    width: 550px; /* ancho */
-    height: 224px; /* alto */
-    display: flex; /* separa divs */
-    gap: 10px; /* crea una sangria, ponele :v */
+    width: 700px;
+    /* ancho */
+    height: 224px;
+    /* alto */
+    display: flex;
+    /* une divs */
+    /* gap: 10px; crea una sangria, ponele :v */
+
+    box-shadow: 1px 1px 12px -4px black;
+
 }
 
-img {
-    border-radius: 8px;
+.contenido-texto {
+    margin: 10px 0px 10px 15px;
 }
 
 h2 {
-    margin-bottom: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.circulo-en-linea {
+    display: flex;
+    align-items: center;
+}
+
+.circulo {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #55cc44;
+    margin: 0px 8px 0px 0px;
+}
+
+.texto-circulo {
+    margin: 0;
+}
+
+.subtexto {
+    color: #9a9a9a;
+}
+
+.unico-parrafo-naranja {
+    color: #f99502;
 }
 
 p {
-    margin-top: 0px;
+    margin: 0;
 }
 
+.nombre-estado,
+.ultima-localizacion,
+.primera-escena {
+    margin: 20px 0px;
+}
 
-html{
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200px;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
+img {
+    border-radius: 8px 0px 0px 8px;
+}
+

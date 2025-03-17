@@ -10,6 +10,7 @@ html {
 }
 
 .contenedor {
+    margin: 100px auto;
     right: 100px;
     background-color: #3c3e44;
 
@@ -60,6 +61,11 @@ h2 {
 
 .unico-parrafo-naranja {
     color: #f99502;
+    font-size: 17px;
+}
+
+.dato-primera-escena {
+    font-size: 17px;
 }
 
 p {

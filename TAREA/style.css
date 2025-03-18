@@ -1,84 +1,92 @@
 html {
-    background-color: #272b33;
-    color: white;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 470;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+  background-color: #272b33;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 470;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 .contenedor {
-    margin: 100px auto;
-    right: 100px;
-    background-color: #3c3e44;
+  margin: 100px auto;
+  right: 100px;
+  background-color: #3c3e44;
+  /* border: 2px solid black; */
 
-    /* border: 2px solid black; */
+  border-radius: 10px;
+  width: 700px;
+  /* ancho */
+  height: 224px;
+  /* alto */
+  display: flex;
+  /* une divs */
+  /* gap: 10px; crea una sangria, ponele :v */
 
-    border-radius: 10px;
-    width: 700px;
-    /* ancho */
-    height: 224px;
-    /* alto */
-    display: flex;
-    /* une divs */
-    /* gap: 10px; crea una sangria, ponele :v */
-
-    box-shadow: 1px 1px 12px -4px black;
-
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.3s ease-out;
 }
 
+/* 
+    Suave: 0.5s cubic-bezier(0.25, 1, 0.5, 1)
+    Rebote Ligero: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)
+    Divertido: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+*/
+
 .contenido-texto {
-    margin: 10px 0px 10px 15px;
+  margin: 10px 0px 10px 15px;
 }
 
 h2 {
-    margin: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
-
 .circulo-en-linea {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .circulo {
-    width: 8px;
-    height: 8px;
-    border-radius: 10px;
-    background-color: #55cc44;
-    margin: 0px 8px 0px 0px;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #55cc44;
+  margin: 0px 8px 0px 0px;
 }
 
 .texto-circulo {
-    margin: 0;
+  margin: 0;
 }
 
 .subtexto {
-    color: #9a9a9a;
+  color: #9a9a9a;
 }
 
 .unico-parrafo-naranja {
-    color: #f99502;
-    font-size: 17px;
+  color: #f99502;
+  font-size: 17px;
 }
 
 .dato-primera-escena {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .nombre-estado,
 .ultima-localizacion,
 .primera-escena {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 img {
-    border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 0px 0px 8px;
+  cursor: pointer;
 }
 
+.contenedor:hover {
+  transform: scale(1.1) translateY(-20px);
+  box-shadow: 4px 4px 30px #1a1c1f;
+}

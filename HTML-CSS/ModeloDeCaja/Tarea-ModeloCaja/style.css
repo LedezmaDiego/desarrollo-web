@@ -30,7 +30,7 @@ h2 {
 }
 
 /* Ejercicio 3: Display Inline-Block */
-.inline-block-list{
+.inline-block{
     display: inline-block;
     width: 100px;
     background-color: seagreen;

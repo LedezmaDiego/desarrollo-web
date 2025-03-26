@@ -1,0 +1,53 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para los títulos */
+h2 {
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Ejercicio 1: Display Block */
+.bloque {
+    display: block;
+    background-color: lightblue;
+    margin: 10px 0;
+    width: 100px;
+}
+
+/* Ejercicio 2: Display Inline */
+.en-linea {
+    display: inline;
+    background-color: lightcoral;
+    margin: 0px 25px;
+    /* Al ser display: inline, no se puede modificar el height ni el width,
+    tampoco el margin-top ni margin-bottom */
+}
+
+/* Ejercicio 3: Display Inline-Block */
+.inline-block-list{
+    display: inline-block;
+    width: 100px;
+    background-color: seagreen;
+    /* No se pueden centrar porque no es display: flex */
+}
+
+/* Ejercicio 4 y 5: Display Flex */
+.flex-container {
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    background-color: chartreuse;
+}
+
+.flex-item {
+    background-color: steelblue;
+    color: white;
+}

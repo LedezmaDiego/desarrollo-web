@@ -1,0 +1,40 @@
+html {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+body {
+  background-image: url("https://wallpapers.com/images/featured/pokemon-hd-fazqcs1tmwwte1ap.jpg");
+}
+
+.grilla {
+  display: grid;
+  /* grid-template-columns: 500px 500px 500px; */
+  /* grid-template-columns: repeat(3, 500px); */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* fr es una fraccion y divide la pagina en la
+  cantidad que diga el primer valor de la funcion*/
+  grid-auto-rows: auto;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1; /* aspect ratio modifica la relacion de aspecto de la
+  foto valor opcional en este ejercicio */
+}
+
+.cont-zygarde {
+  background-color: grey;
+}
+.cont-kyogre {
+  background-color: rgb(53, 53, 122);
+}
+.cont-swampert {
+  background-color: rgb(165, 66, 66);
+}

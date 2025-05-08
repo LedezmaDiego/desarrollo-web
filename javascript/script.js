@@ -1,90 +1,123 @@
-// Lenguaje de programacion client-side
-// Actualmente orientado a funciones
+// Variable Global (no se recomienda usar var hoy en día)
+var Variable_Nueva = "• Contenido de la variable •";
 
-var miVariable = 'contenido de la variable'; //no se usa
+// let -> Variable local. Su valor puede cambiar.
+let Mensaje_Importante = "• Sus valores pueden ser re-escritos/cambiados •";
+Mensaje_Importante = 50;
 
-// let --> solamente vive en el scope declarado o en sus hijos
-let miVariable2 = "pueden ser re-escritos sus valores";
-miVariable2 = 9; // Reasignación del valor
+// const -> Constante. Su valor no puede cambiar.
+const Inamovible = 33;
 
+/* Tipos de Datos */
+const texto = "string";         // Texto
+const numeros = 2;              // Número
+const booleanos = true;         // Booleano
+const indefinido = undefined;   // Valor no definido
+const vacio = null;             // Valor vacío
+const numeroGrande = BigInt(123456789012345678901234567890);
 
-// const --> variable constante no son reasignables los valores
-const miVariable3 = 10;
+/* ---------------------- Operadores ---------------------- */
+// Aritméticos: + - * / % 
+// Comparación:
+// ==   -> Compara solo el valor
+// ===  -> Compara valor y tipo
+// !=   -> Distinto valor
+// !==  -> Distinto valor o tipo
+// > < >= <= -> Comparaciones numéricas
 
-/* Tipos de datos */
-const text = 'string';
-const numeros = 2; // number
-const booleanos = true; // boolean
-// undefined --> valor no definido
-// null --> vacio
+/* ---------------------- Condicionales ---------------------- */
 
-// Operadores
-
-// Aritméticos: son todos los de matemáticas + - / % *
-
-/* comparación:
-doble igual == compara el valor del dato
-triple igual === compara el valor y el tipo de dato
-distinto el valor !=
-distinto valor y el tipo !==
-mayor, menor > <
-mayor o igual >=
-menor o igual <=
-*/
-
-// Condicionales
-// if
 const edad = 20;
-if (edad > 18){
-    console.log("Sos mayor de edad."); // Mostrar por consola
-    // Es el print de Python
+if (edad > 18) {
+    console.log('Sos Mayor de Edad');
 } else {
-    console.log("Sos menor de edad.");
+    console.log('Sos Menor de Edad');
 }
 
-// switch
-const dia = 8;
-
-
-switch(dia){
-    case 1: console.log('dia lunes'); break
-    case 2: console.log('dia martes'); break
-    default: console.log('Dia no registrado');
+// Switch
+const dia = 2;
+switch (dia) {
+    case 1:
+        console.log('Día lunes');
+        break;
+    case 2:
+        console.log('Día martes');
+        break;
+    default:
+        console.log('Día no registrado');
+        break;
 }
 
-// Funciones
-// Declaración función clásica
-function saludar(nombre){
+/* ---------------------- Funciones ---------------------- */
+
+// Función clásica
+function saludar(nombre) {
+    return `Hola ${nombre}`;
+}
+console.log(saludar('Fede'));
+
+// Arrow Function (función flecha)
+// Return explícito
+const saludo = (nombre) => {
     return `Hola ${nombre}`;
 };
 
-console.log(saludar("Fede"));
-
-// Arrow function:
 // Return implícito
-const saludoImplicito = (nombre) => (`Holitas ${nombre}`);
-// Si el return implícito tiene ma de una linea va a estar
-// envuelto en parentesis (`Hola ${nombre}`...)
-console.log(saludoImplicito("Juanma"));
+const saludos = (nombre) => `Hola ${nombre}`;
 
-// Return explícito
-const saludoExplicito = (nombre) => {
-    return `Buenas ${nombre}`;
-};
-console.log(saludoExplicito("Juan Manuel"));
+/* ---------------------- Arreglos (Arrays) ---------------------- */
 
-//Arreglos o arrays (listas en python)
-const miArreglo = [1, 2, "pepito", true];
-console.log(miArreglo[2]);
+const Array_Propio = [1, 2, 'Pablo', false];
+console.log(Array_Propio[2]); // Muestra "Pablo"
 
-const miObjeto = {
-    clave: "valor",
-    nombre: "Federico",
+/* ---------------------- Objetos ---------------------- */
+
+const MisObjetos = {
+    clave: 'valor',
+    nombre: 'Federico',
     edad: 29,
 };
-console.log(miObjeto.nombre);
+console.log(MisObjetos.nombre); // Muestra "Federico"
 
-// Iteramos una lista con for
-for (let i = 0; i < miArreglo.length; i++){
-    console.log(miArreglo[i]); // Imprime, en pantalla, el arreglo con su posición
+/* ---------------------- Iteraciones ---------------------- */
+
+// for clásico
+for (let i = 0; i < Array_Propio.length; i++) {
+    console.log(Array_Propio[i]);
 }
+
+// Métodos de Array
+
+// Push: Agrega al final
+Array_Propio.push('Matias');
+console.log(Array_Propio);
+
+// Pop: Elimina el último
+const ultimo_del_array = Array_Propio.pop();
+console.log(ultimo_del_array);
+
+// Unshift: Agrega al inicio
+Array_Propio.unshift('Hice_un_juego');
+console.log(Array_Propio);
+
+// Shift: Elimina el primero
+const elemento_borrado = Array_Propio.shift();
+console.log(elemento_borrado);
+
+// forEach: Recorre sin modificar
+Array_Propio.forEach((item, index) => {
+    console.log('index:', index, 'item:', item);
+});
+
+// map: Crea nuevo array modificando los valores
+const nuevoArray = Array_Propio.map((item, index) => {
+    const num = 2;
+    console.log(index, 'item:', item);
+    return item + num;
+});
+console.log('Array Modificado:', nuevoArray);
+
+// filter: Crea nuevo array con elementos que cumplen condición
+const ArrayNum = [2, 4, 5, 6];
+const Numeros_Pares = ArrayNum.filter((item) => item % 2 === 0);
+console.log(Numeros_Pares);

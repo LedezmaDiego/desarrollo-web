@@ -18,11 +18,11 @@ boton.addEventListener('click', function() {
 
         inputTexto.value = ""; // Limpia el cuadrito de input texto
 
-        inputCheckbox.addEventListener("change", function(ev) {
-        let ck = ev.target;
-        let li = ck.parentElement;
-        if (ck.checked){
-            li.remove();
+        inputCheckbox.addEventListener("change", function(evt) {
+        let datos_checkbox = evt.target; // target registra todos los datos del evento
+        let lista_ckb = datos_checkbox.parentElement;
+        if (datos_checkbox.checked){
+            lista_ckb.remove();
         }
         });
     }

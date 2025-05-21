@@ -51,8 +51,11 @@ fetch("https://rickandmortyapi.com/api/character")
 const asyncFunction = async () => {
   //try catch
   try {
-    const response = await fetch("https://rickandmortyapi.com/api/character/2");
-    const data = await response.json();
+    const response = await fetch("https://rickandmortyapi.com/api/character");
+    const data = await response.json(); // Importante
+    const arrayFiltrado = data.results.filter((objetito) => objetito.id === 1);
+    console.log(arrayFiltrado);
+
     console.log("data", data);
   } catch (error) {
     console.log("error", error);

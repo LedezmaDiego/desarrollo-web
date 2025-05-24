@@ -38,7 +38,7 @@ button.addEventListener("click", () => {
 // fetch
 fetch("https://rickandmortyapi.com/api/character")
   .then((data) => data.json()) // Siempre se manipulara con json, esta linea siempre esta presente
-  .then((response) => console.log("response", response.results));
+  .then((response) => console.log("response", response));
 
 // En objetos se accede a elementos con response.results, donde results es el nombre de la clave
 // O con response["results"], donde results en la clave

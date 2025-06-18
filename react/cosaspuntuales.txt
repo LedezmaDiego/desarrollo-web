@@ -1,0 +1,35 @@
+
+Los componentes cuando se declaran siempre arrancan
+con mayuscula (PascalCase)
+
+El return retorna html (estética)
+
+Los archivos ahora tienen la extensión JSX
+Ya no mas HTML ni JS
+
+En un return puede haber solamente un hijo
+
+Las boquitas <> y </> no impoactan en el SEO (Optimization Engine Search)
+
+Las dependencias son para desarrollar la página
+
+Dependencias de desarrollo, son dependencias que 
+nos ayudan a nosotros como programadores a desarrollar la pagina
+
+El index.html no lo tocamos, ni modificamos
+
+Es raro que main.jsx tenga codigo adentro nuevo, a menos que importemos algo nuevo
+
+En el main se importa el css global o generico
+
+export default Usuario; --> export no nombrado o default
+
+export nombrado
+
+Los props son valores que le podemos 
+pasar a los componentes para que los tomen y los usen para 
+realizar una acción
+
+Hooks = Ganchos, Los Hooks siempre arrancan con la palabra "use", ejemplo, useEffect
+
+el useState sirve para guardar datos en la variable

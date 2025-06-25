@@ -1,41 +1,35 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Pepito from "./components/usuario/Usuario";
-import { Proveedor } from "./components/proveedor/Proveedor";
 import { useEffect, useState } from "react";
+import { RickAndMorty } from "./components/rickandmorty/RickAndMorty";
 
 function App() {
-  const [characters, setCharacters] = useState([]);
-  // const [variable, funcion actualizadora] = useState([valor inicial]);
+  const [nombre, setNombre] = useState("");
 
-  // el useEffect va a ejecutar el codigo que se encuentra
-  // dentro, tantas veces como se actualicen sus dependencias
-  // si no hay dependencias se ejecuta solo antes del primer
-  // renderizado, render es cuando la página aparece
-  useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character")
-      .then((data) => data.json())
-      .then((response) => setCharacters(response.results));
-  }, []);
+  // Siempre que vayamos a hacer un click
+  // el evento se va a llamar handle
+  const handleClick = () => {
+    console.log(nombre);
+  };
+  //la funcion "handleClick", no la ejecucion "handleClick()"
+
+  const handleInputChange = (event) => {
+    setNombre(event.target.value);
+  };
 
   return (
     <>
-      {characters ? (
-        characters.map((item, index) => {
-          return <p>{item.name}</p>;
-        })
-      ) : (
-        <> cargando... </>
-      )}
-      sdac asdcsc sdcsc afafa afafa afafaa d<br></br>
-      <button>
-        Si los papus fueran tomtoz no exisitirian los tilines del oeste
-      </button>
-      <br></br>
-      <Pepito />
-      <br></br>
-      <Proveedor name={"Juanmita"} />
+      <input
+        type="text"
+        placeholder="Escribí tu nombre"
+        onChange={handleInputChange}
+        value={nombre}
+      />
+      <button onClick={handleClick}>Mostrar</button>
+      {nombre && <h2>{nombre}</h2>}
+
+      {nombre === "" ? <>hola</> : <>chau</>}
     </>
   );
 }

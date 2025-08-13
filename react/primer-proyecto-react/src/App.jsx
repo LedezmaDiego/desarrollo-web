@@ -8,7 +8,7 @@ import { TodoJunto } from "./components/ejercicio5/TodoJunto";
 function App() {
   return (
     <>
-      <Contador />
+      {/* <Contador />
       <br />
       <CapturarInput />
       <br />
@@ -16,7 +16,7 @@ function App() {
       <br />
       <SimuladorDeCarga />
       <br />
-      <TodoJunto />
+      <TodoJunto /> */}
     </>
   );
 }
